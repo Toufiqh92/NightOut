@@ -7,8 +7,7 @@ export default function AddDrinkss() {
 
   const saveDrink = () => {
     if (!name.trim() || !amount.trim()) {
-      return;
-    Alert.alert("Missing info", "Please enter a drink name and amount");
+      return Alert.alert("Missing info", "Please enter a drink name and amount");
     }
     Alert.alert("Saved", `Added ${amount} of ${name}`);
     setName("");
@@ -29,7 +28,7 @@ export default function AddDrinkss() {
         <Text style={{ fontSize: 18, fontWeight: "600" }}>
           Add a drink entry
         </Text>
-        <TextInput
+        <TextInput 
           value={name}
           onChangeText={setName}
           placeholder="Drink name (e.g., Water)"
