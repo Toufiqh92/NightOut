@@ -7,7 +7,5 @@ export default function RootLayout() {
     <Stack.Screen name="Circle" options={{ title: "Circle" }} />
     <Stack.Screen name="addFriends" options={{ title: "Add Friends" }} />
   </Stack>
-
-    
   );
 }
