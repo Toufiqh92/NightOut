@@ -50,20 +50,7 @@ export default function Index() {
       {/* Map fills screen above buttons, centered on user */}
       <MapView style={{ flex: 1 }} region={region} showsUserLocation />
 
-      {/* Bottom buttons */}
-      <View
-        style={{
-          flexDirection: "row",
-          justifyContent: "space-evenly",
-          alignItems: "center",
-          paddingVertical: 12,
-          borderTopWidth: 1,
-          borderColor: "#e5e5e5",
-          backgroundColor: "#fff",
-        }}
-      >
-        <Button title="Home" onPress={() => window.location.reload()} />
-        <Button title="Circle" onPress={() => router.push("/Circle")} />
+      <View>
       </View>
     </View>
   );

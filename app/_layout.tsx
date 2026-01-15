@@ -1,11 +1,27 @@
-import { Stack } from "expo-router";
-export default function RootLayout() {
+import { Tabs } from "expo-router";
+
+export default function TabLayout() {
   return (
-  
-  <Stack>
-    <Stack.Screen name="index" options={{ title: "Home" }} />
-    <Stack.Screen name="Circle" options={{ title: "Circle" }} />
-    <Stack.Screen name="addFriends" options={{ title: "Add Friends" }} />
-  </Stack>
+    <Tabs screenOptions={{ tabBarActiveTintColor: "Red" }}>
+      <Tabs.Screen
+        name="index"
+        options={{
+          title: "Home",
+          // You can add icons here using tabBarIcon
+        }}
+      />
+      <Tabs.Screen
+        name="addFriends"
+        options={{
+          title: "Add Friends",
+        }}
+      />
+      <Tabs.Screen
+        name="circle"
+        options={{
+          title: "Circle",
+        }}
+      />
+    </Tabs>
   );
 }
