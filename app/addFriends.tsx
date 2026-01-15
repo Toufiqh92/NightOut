@@ -7,7 +7,6 @@ export default function addFriends() {
             <Text>Add Friends</Text>
             <Button title="Home" onPress={() => window.location.reload()} />
             <Button title="Add Friends" onPress={() => router.push("/addFriends")} />
-            <Button title="Add Drinks" onPress={() => router.push("/AddDrinkss")} />
             <Button title="Circle" onPress={() => router.push("/Circle")} />
         </View>
     )
