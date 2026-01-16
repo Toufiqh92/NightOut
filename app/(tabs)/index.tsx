@@ -3,7 +3,8 @@ import { useEffect, useState } from "react";
 import { Button, View, ActivityIndicator, Text } from "react-native";
 import MapView, { Region } from "react-native-maps";
 import * as Location from "expo-location";
-
+import { Marker } from "react-native-maps";
+import PulseMarker from "./pulseMarkerForUser";
 export default function Index() {
   const [region, setRegion] = useState<Region | null>(null);
   const [loading, setLoading] = useState(true);
@@ -40,7 +41,7 @@ export default function Index() {
     return (
       <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
         <ActivityIndicator size="large" />
-        <Text style={{ marginTop: 8 }}>Getting your location...</Text>
+        <Text style={{ marginTop: 7 }}>Getting your location...</Text>
       </View>
     );
   }
@@ -48,7 +49,11 @@ export default function Index() {
   return (
     <View style={{ flex: 1 }}>
       {/* Map fills screen above buttons, centered on user */}
-      <MapView style={{ flex: 1 }} region={region} showsUserLocation />
+      <MapView style={{ flex: 1 }} region={region}>
+  <Marker coordinate={{ latitude: region.latitude, longitude: region.longitude }}>
+    <PulseMarker />
+  </Marker>
+</MapView>
 
       <View>
       </View>
