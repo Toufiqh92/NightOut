@@ -45,13 +45,13 @@ const styles = StyleSheet.create({
     width: 40,
     height: 40,
     borderRadius: 20,
-    backgroundColor: "red",
+    backgroundColor: "#FF6B6B",
   },
   dot: {
     position: "absolute",
     width: 12,
     height: 12,
     borderRadius: 6,
-    backgroundColor: "red",
+    backgroundColor: "#FF6B6B",
   },
 });
